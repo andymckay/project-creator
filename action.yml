@@ -10,5 +10,6 @@ inputs:
   structure:
     description: 'The structure of the project in JSON.'
     required: true
-using: 'node12'
-main: 'project.js'
+runs:
+  using: 'node12'
+  main: 'project.js'
