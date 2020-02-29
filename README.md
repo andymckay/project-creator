@@ -1,0 +1,1 @@
+A really rather daft little Action that could really benefit from using a library as opposed to stubbornly not trying to. Anyway, it creates a project board based on a destination and some JSON containing the structure.
