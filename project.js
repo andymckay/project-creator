@@ -2,8 +2,7 @@ let token = process.env.INPUT_TOKEN;
 let fs = require('fs');
 let https = require('https');
 let destination = process.env.INPUT_DESTINATION;
-let structure = JSON.parse(process.env.INPUT_STRUCTURE);
-var querystring = require('querystring');
+let structure = JSON.parse(fs.readFileSync(process.env.INPUT_FILE));
 
 function call(url, data) {
     let json = JSON.stringify(data);
