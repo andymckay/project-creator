@@ -1,0 +1,14 @@
+name: 'Create project'
+inputs:
+  destination:
+    description: 'Users repo to create the project'
+    required: true
+  token:
+    description: 'Token'
+    required: false
+    default: ${{ github.token }}
+  structure:
+    description: 'The structure of the project in JSON.'
+    required: true
+using: 'node12'
+main: 'project.js'
