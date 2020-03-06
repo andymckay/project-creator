@@ -62,10 +62,12 @@ call(`/repos/${destination}/projects`, projectData)
                     `/projects/${project.id}/columns`,
                     {'name' : column['name']}
                 ).then((res) => {
-                    return call(
-                        `/projects/columns/${res.id}/cards`,
-                        {'note': column['card']}
-                    )
+                    for (let card in column['cards']) {
+                        return call(
+                            `/projects/columns/${res.id}/cards`,
+                            {'note': card}
+                        )
+                    }
                 }).then(next)
             }
         }
