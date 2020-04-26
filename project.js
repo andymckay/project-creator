@@ -51,6 +51,7 @@ let projectData = {
 call(`/repos/${destination}/projects`, projectData)
 .then((res) => {
     console.log(`Created project: ${res.html_url}`)
+    process.stdout.write(`::set-output name=url::${res.html_url}`)
     return res;
 }).then((project) => {
     function processColumns(columns) {
