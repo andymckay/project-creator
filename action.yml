@@ -7,8 +7,8 @@ inputs:
     description: 'Token'
     required: false
     default: ${{ github.token }}
-  structure:
-    description: 'The structure of the project in JSON.'
+  file:
+    description: 'The structure of the project in JSON a file.'
     required: true
 runs:
   using: 'node12'
